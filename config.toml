@@ -22,12 +22,12 @@ theme = 'hugo-coder'
 
 [[languages.en.menu.main]]
   name = "Contact"
-  weight = 1
+  weight = 2
   url  = "contact/"
   
  [[languages.en.menu.main]]
   name = "Posts"
-  weight = 1
+  weight = 3
   url  = "posts/"
 
 [[languages.pt.menu.main]]
@@ -37,12 +37,12 @@ theme = 'hugo-coder'
 
 [[languages.pt.menu.main]]
   name = "Contato"
-  weight = 1
+  weight = 2
   url  = "contact/"
   
 [[languages.pt.menu.main]]
   name = "Posts"
-  weight = 1
+  weight = 3
   url  = "posts/"
   
 [params]

@@ -131,6 +131,19 @@
                 href="https://mendoncas.xyz/about/"
                 />
   </url><url>
+    <loc>https://mendoncas.xyz/contact/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://mendoncas.xyz/pt/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mendoncas.xyz/contact/"
+                />
+  </url><url>
     <loc>https://mendoncas.xyz/categories/</loc>
     <xhtml:link
                 rel="alternate"
