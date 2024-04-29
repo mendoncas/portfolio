@@ -1,0 +1,104 @@
+baseURL = 'https://mendoncas.xyz/'
+languageCode = 'en'
+title = 'Ricardo de Mendonça'
+
+theme = 'hugo-coder'
+
+[languages]
+  [languages.en]
+    contentDir = 'content/en'
+    languageName = 'English'
+    weight = 10
+  [languages.pt]
+    contentDir = 'content/pt'
+    languageName = 'Português'
+    weight = 20
+    
+  
+[[languages.en.menu.main]]
+  name = "About"
+  weight = 1
+  url  = "about/"
+
+[[languages.en.menu.main]]
+  name = "Contact"
+  weight = 1
+  url  = "contact/"
+  
+ [[languages.en.menu.main]]
+  name = "Posts"
+  weight = 1
+  url  = "posts/"
+
+[[languages.pt.menu.main]]
+  name = "Sobre mim"
+  weight = 1
+  url = "about/"  
+
+[[languages.pt.menu.main]]
+  name = "Contato"
+  weight = 1
+  url  = "contact/"
+  
+[[languages.pt.menu.main]]
+  name = "Posts"
+  weight = 1
+  url  = "posts/"
+  
+[params]
+author = "Ricardo de Mendonça"
+# license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
+description = "Ricardo's website"
+keywords = "blog,developer,professional"
+hideColorSchemeToggle = true
+info = ["DevOps Engineer"]
+avatarURL = "images/pic.jpeg"
+  
+[languages.pt-br.params]
+author = "Ricardo de Mendonça"
+info = "Engenheiro DevOps"
+description = "Site profissional de Ricardo"
+keywords = "blog,desenvolvedor,profissional"
+
+[languages.en.params]
+author = "Ricardo de Mendonça"
+info = "DevOps Engineer"
+description = "Ricardo's Website"
+keywords = "blog,developer,professional"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "fa-brands fa-linkedin fa-2x"
+weight = 4
+url = "https://www.linkedin.com/in/ricardo-c-g-de-mendon%C3%A7a-filho/"
+
+[[params.social]]
+name = "Github"
+icon = "fa-brands fa-github fa-2x"
+weight = 1
+url = "https://github.com/mendoncas/"
+
+[params.csp]
+  childsrc = ["'self'"]
+  fontsrc = [
+    "'self'",
+    "https://fonts.gstatic.com",
+    "https://cdn.jsdelivr.net/"
+  ]
+  formaction = ["'self'"]
+  framesrc = ["'self'"]
+  imgsrc = ["'self'"]
+  objectsrc = ["'none'"]
+  stylesrc = [
+    "'self'",
+    "'unsafe-inline'",
+    "https://fonts.googleapis.com/",
+    "https://cdn.jsdelivr.net/"
+  ]
+  scriptsrc = [
+    "'self'",
+    "'unsafe-inline'",
+    "https://www.google-analytics.com"
+  ]
+  # connect-src directive – defines valid targets for XMLHttpRequest (AJAX), WebSockets or EventSource
+  connectsrc = ["'self'"]

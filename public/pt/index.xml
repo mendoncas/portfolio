@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ricardo de Mendonça</title>
+    <link>https://mendoncas.xyz/pt/</link>
+    <description>Recent content on Ricardo de Mendonça</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 03 Mar 2024 11:37:01 -0300</lastBuildDate><atom:link href="https://mendoncas.xyz/pt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A tranquilidade do GitOps</title>
+      <link>https://mendoncas.xyz/pt/posts/gitops/</link>
+      <pubDate>Sun, 03 Mar 2024 11:37:01 -0300</pubDate>
+      
+      <guid>https://mendoncas.xyz/pt/posts/gitops/</guid>
+      <description>Recentemente, migramos todos os nossos serviços de um cluster DC/OS Marathon para um cluster Openshift. Isso representou um grande passo para nossa organização, pois tivemos que nos adaptar a uma plataforma completamente nova. Isso incluiu encontrar maneiras mais modernas e eficientes de arquitetar nossos pipelines de CI/CD. Enquanto pesquisava os muitos mecanismos de entrega contínua que podem ser implementados, me deparei com os pipelines baseados em pull e o paradigma GitOps, e foi amor à primeira vista.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mendoncas.xyz/pt/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mendoncas.xyz/pt/about/</guid>
+      <description>Oi, me chamo Ricardo! Link to heading Eu sou um engenheiro DevOps e programador. Estou envolvido no desenvolvimento de aplicações usando Spring, Quarkus e NestJS. Construo pipelines de CI/CD com Gitlab CI e ArgoCD em clusters Kubernetes. Tenho uma base sólida em sistemas Linux e na criação de containers com Docker, e trabalho diariamente na provisionamento de aplicações e serviços no Kubernetes.
+Acredito que há valor em analisar e discutir temas técnicos através de uma lente pessoal e focada em experiência.</description>
+    </item>
+    
+  </channel>
+</rss>

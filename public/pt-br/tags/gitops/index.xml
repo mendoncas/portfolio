@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gitops on Ricardo de Mendonça</title>
+    <link>https://mendoncas.xyz/pt-br/tags/gitops/</link>
+    <description>Recent content in gitops on Ricardo de Mendonça</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 03 Mar 2024 11:37:01 -0300</lastBuildDate><atom:link href="https://mendoncas.xyz/pt-br/tags/gitops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A tranquilidade do GitOps</title>
+      <link>https://mendoncas.xyz/pt-br/pt/posts/gitops/</link>
+      <pubDate>Sun, 03 Mar 2024 11:37:01 -0300</pubDate>
+      
+      <guid>https://mendoncas.xyz/pt-br/pt/posts/gitops/</guid>
+      <description>Recentemente, migramos todos os nossos serviços de um cluster DC/OS Marathon para um cluster Openshift. Isso representou um grande passo para nossa organização, pois tivemos que nos adaptar a uma plataforma completamente nova. Isso incluiu encontrar maneiras mais modernas e eficientes de arquitetar nossos pipelines de CI/CD. Enquanto pesquisava os muitos mecanismos de entrega contínua que podem ser implementados, me deparei com os pipelines baseados em pull e o paradigma GitOps, e foi amor à primeira vista.</description>
+    </item>
+    
+    <item>
+      <title>The peace of mind of GitOps</title>
+      <link>https://mendoncas.xyz/pt-br/en/posts/gitops/</link>
+      <pubDate>Sun, 03 Mar 2024 11:37:01 -0300</pubDate>
+      
+      <guid>https://mendoncas.xyz/pt-br/en/posts/gitops/</guid>
+      <description>Recently, we have migrated all of our services from a DC/OS Marathon cluster to an Openshift one. This was quite a big step for our organization, as we had to adapt to a completely new platform. This included finding more modern and efficient ways to architect our CI/CD pipelines. As i researched the many different continuous delivery mechanisms that can be implemented, i stumbled upon the pull-based pipelines and the GitOps paradigm, and it was love at first sight.</description>
+    </item>
+    
+  </channel>
+</rss>

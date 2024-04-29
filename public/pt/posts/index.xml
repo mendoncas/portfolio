@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Ricardo de Mendonça</title>
+    <link>https://mendoncas.xyz/pt/posts/</link>
+    <description>Recent content in Posts on Ricardo de Mendonça</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 03 Mar 2024 11:37:01 -0300</lastBuildDate><atom:link href="https://mendoncas.xyz/pt/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A tranquilidade do GitOps</title>
+      <link>https://mendoncas.xyz/pt/posts/gitops/</link>
+      <pubDate>Sun, 03 Mar 2024 11:37:01 -0300</pubDate>
+      
+      <guid>https://mendoncas.xyz/pt/posts/gitops/</guid>
+      <description>Recentemente, migramos todos os nossos serviços de um cluster DC/OS Marathon para um cluster Openshift. Isso representou um grande passo para nossa organização, pois tivemos que nos adaptar a uma plataforma completamente nova. Isso incluiu encontrar maneiras mais modernas e eficientes de arquitetar nossos pipelines de CI/CD. Enquanto pesquisava os muitos mecanismos de entrega contínua que podem ser implementados, me deparei com os pipelines baseados em pull e o paradigma GitOps, e foi amor à primeira vista.</description>
+    </item>
+    
+  </channel>
+</rss>

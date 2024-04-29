@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Ricardo de Mendonça</title>
+    <link>https://mendoncas.xyz/tags/</link>
+    <description>Recent content in Tags on Ricardo de Mendonça</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 03 Mar 2024 11:37:01 -0300</lastBuildDate><atom:link href="https://mendoncas.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>devops</title>
+      <link>https://mendoncas.xyz/tags/devops/</link>
+      <pubDate>Sun, 03 Mar 2024 11:37:01 -0300</pubDate>
+      
+      <guid>https://mendoncas.xyz/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gitops</title>
+      <link>https://mendoncas.xyz/tags/gitops/</link>
+      <pubDate>Sun, 03 Mar 2024 11:37:01 -0300</pubDate>
+      
+      <guid>https://mendoncas.xyz/tags/gitops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://mendoncas.xyz/tags/kubernetes/</link>
+      <pubDate>Sun, 03 Mar 2024 11:37:01 -0300</pubDate>
+      
+      <guid>https://mendoncas.xyz/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

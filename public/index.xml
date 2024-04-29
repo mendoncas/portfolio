@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ricardo de Mendonça</title>
+    <link>https://mendoncas.xyz/</link>
+    <description>Recent content on Ricardo de Mendonça</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 03 Mar 2024 11:37:01 -0300</lastBuildDate><atom:link href="https://mendoncas.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The peace of mind of GitOps</title>
+      <link>https://mendoncas.xyz/posts/gitops/</link>
+      <pubDate>Sun, 03 Mar 2024 11:37:01 -0300</pubDate>
+      
+      <guid>https://mendoncas.xyz/posts/gitops/</guid>
+      <description>Recently, we have migrated all of our services from a DC/OS Marathon cluster to an Openshift one. This was quite a big step for our organization, as we had to adapt to a completely new platform. This included finding more modern and efficient ways to architect our CI/CD pipelines. As i researched the many different continuous delivery mechanisms that can be implemented, i stumbled upon the pull-based pipelines and the GitOps paradigm, and it was love at first sight.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mendoncas.xyz/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mendoncas.xyz/about/</guid>
+      <description>Hi, i&amp;rsquo;m Ricardo! Link to heading I am a DevOps engineer and programmer. I am involved in the development of applications using Spring, Quarkus, and NestJS. I build CI/CD pipelines with Gitlab CI and ArgoCD on Kubernetes clusters. I have a strong foundation in Linux systems and container creation with Docker, and I work daily on provisioning applications and services on Kubernetes.
+I believe there is value in analyzing and discussing technical subjects through personal, experience-focused, lenses.</description>
+    </item>
+    
+  </channel>
+</rss>

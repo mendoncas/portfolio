@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  The peace of mind of GitOps · Ricardo Mendonça
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; form-action 'self'; frame-src 'self'; img-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com; connect-src 'self';">
+
+
+
+
+<meta name="description" content="Recently, we have migrated all of our services from a DC/OS Marathon cluster to an Openshift one. This was quite a big step for our organization, as we had to adapt to a completely new platform. This included finding more modern and efficient ways to architect our CI/CD pipelines. As i researched the many different continuous delivery mechanisms that can be implemented, i stumbled upon the pull-based pipelines and the GitOps paradigm, and it was love at first sight.">
+<meta name="keywords" content="">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The peace of mind of GitOps"/>
+<meta name="twitter:description" content="Recently, we have migrated all of our services from a DC/OS Marathon cluster to an Openshift one. This was quite a big step for our organization, as we had to adapt to a completely new platform. This included finding more modern and efficient ways to architect our CI/CD pipelines. As i researched the many different continuous delivery mechanisms that can be implemented, i stumbled upon the pull-based pipelines and the GitOps paradigm, and it was love at first sight."/>
+
+<meta property="og:title" content="The peace of mind of GitOps" />
+<meta property="og:description" content="Recently, we have migrated all of our services from a DC/OS Marathon cluster to an Openshift one. This was quite a big step for our organization, as we had to adapt to a completely new platform. This included finding more modern and efficient ways to architect our CI/CD pipelines. As i researched the many different continuous delivery mechanisms that can be implemented, i stumbled upon the pull-based pipelines and the GitOps paradigm, and it was love at first sight." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mendoncas.xyz/en/blog/gitops/" /><meta property="article:section" content="en" />
+<meta property="article:published_time" content="2024-03-03T11:37:01-03:00" />
+<meta property="article:modified_time" content="2024-03-03T11:37:01-03:00" />
+
+
+
+
+<link rel="canonical" href="https://mendoncas.xyz/en/blog/gitops/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.38c4552ac40f9ae3408bad40358f654ebd8804412fe74ed56f2d6c8a7af82dd3.css" integrity="sha256-OMRVKsQPmuNAi61ANY9lTr2IBEEv507Vby1sinr4LdM=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+<body class="preload-transitions colorscheme-light">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://mendoncas.xyz/">
+      Ricardo Mendonça
+    </a>
+    
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://mendoncas.xyz/en/blog/gitops/">
+          The peace of mind of GitOps
+        </a>
+      </h1>
+    </header>
+
+    <p>Recently, we have migrated all of our services from a DC/OS Marathon cluster to an Openshift one.
+This was quite a big step for our organization, as we had to adapt to a completely new platform.
+This included finding more modern and efficient ways to architect our CI/CD pipelines.
+As i researched the many different continuous delivery mechanisms that can be implemented,
+i stumbled upon the pull-based pipelines and the GitOps paradigm, and it was love at first sight.</p>
+<p>Here, i´m going to share my experience implementing the GitOps paradigm and using ArgoCD as the tool of choice for  continuous delivery.</p>
+<h2 id="gitops-compared-to-the-traditional-approach">
+  GitOps, compared to the traditional approach
+  <a class="heading-link" href="#gitops-compared-to-the-traditional-approach">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>First, it is important see the difference and main advantages of GitOps compared to the traditional approach, the push-based pipelines.
+Push-based pipelines, simply put, are pipelines that <em>push</em> to your deployment at the delivery step of your CI/CD. As an example,
+a traditional pipeline that deploys to kubernetes might end with the command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl apply -f deployment.yaml
+</span></span></code></pre></div><p>In contrast, a pull-based pipeline relies on a tool that <em>polls</em> a certain resource for the desired state and applies it to your cluster.
+In our case, the tool of choice is ArgoCD, and the polled resource is a git repository.
+The practice of utilizing of a git repository as the single source of truth for deployment
+configuration is what we call GitOps. This guarantees a very important property:
+every deployment configuration of each application is subject to version control. This allows us to easily track, manage and,
+if necessary, rollback to previous states.</p>
+<h2 id="adoption-and-implementation">
+  Adoption and implementation
+  <a class="heading-link" href="#adoption-and-implementation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>After setting up an ArgoCD proof of concept pipeline, i presented it to my colleagues.
+At first, the delivery step was counter-intuitive, however, my colleagues quickly noticed the value of version-controlling our
+deployments and we collectively agreed that this approach would be the one.
+This was an important step, considering that DevOps is more about culture than anything else, it is important to have the whole team on the same page.
+Once our team decided to go with ArgoCD, we had to decide how to actually implement our new pipelines. Here´s how we did it:</p>
+<h3 id="monorepo">
+  Monorepo
+  <a class="heading-link" href="#monorepo">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Our single source of truth is a monorepo with files for every application.
+For each branch of each application, we have a helm chart for it´s corresponding deployment,
+following this format:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git/path/to/application
+</span></span><span style="display:flex;"><span>├── branch-name
+</span></span><span style="display:flex;"><span>│   ├── Chart.yaml
+</span></span><span style="display:flex;"><span>│   ├── templates
+</span></span><span style="display:flex;"><span>│   └── values.yaml
+</span></span></code></pre></div><p>This allows us to easily find every app, considering that the path to it inside the monorepo is equal to the application´s path on our git server.
+At first, i was worried that the monorepo would get too big and end up slowing down our pipelines, but it turned out to just not be an issue.</p>
+<h3 id="pipelines">
+  Pipelines
+  <a class="heading-link" href="#pipelines">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The &ldquo;delivery&rdquo; steps of our pipelines got a lot simpler, and we ended up with something similar to this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone monorepo
+</span></span><span style="display:flex;"><span>yq -i <span style="color:#e6db74">&#39;.image = &#34;new-image-name&#34;&#39;</span> values.yaml <span style="color:#75715e"># update image name in values.yaml</span>
+</span></span><span style="display:flex;"><span>git commit . -m <span style="color:#e6db74">&#34;commit message&#34;</span>
+</span></span><span style="display:flex;"><span>git push
+</span></span></code></pre></div><p>As ArgoCD is only responsible for watching over a git repository and deploy changes, we were able to keep our CI steps exactly the same.</p>
+<h2 id="the-results">
+  The results
+  <a class="heading-link" href="#the-results">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Migrating to a whole new platform and deployment process was quite a lot of work, but the process was relatively simple.
+The benefits were exactly as expected: no more stress over mysterious config files on mysterious locations; or lost, non-recorded changes!
+There is a peace of mind in DevOps that only version-controlled deployments and simple deliveries can bring!</p>
+<h2 id="related-readings-and-references">
+  Related readings and references
+  <a class="heading-link" href="#related-readings-and-references">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><a href="https://alex.kaskaso.li/post/pull-based-pipelines"  class="external-link" target="_blank" rel="noopener">Security benefits of pull-based pipelines, by alxk</a></p>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2024
+    
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

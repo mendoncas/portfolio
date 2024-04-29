@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ricardo de Mendonça</title>
+    <link>https://mendoncas.xyz/pt-br/</link>
+    <description>Recent content on Ricardo de Mendonça</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 03 Mar 2024 11:37:01 -0300</lastBuildDate><atom:link href="https://mendoncas.xyz/pt-br/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A tranquilidade do GitOps</title>
+      <link>https://mendoncas.xyz/pt-br/pt/posts/gitops/</link>
+      <pubDate>Sun, 03 Mar 2024 11:37:01 -0300</pubDate>
+      
+      <guid>https://mendoncas.xyz/pt-br/pt/posts/gitops/</guid>
+      <description>Recentemente, migramos todos os nossos serviços de um cluster DC/OS Marathon para um cluster Openshift. Isso representou um grande passo para nossa organização, pois tivemos que nos adaptar a uma plataforma completamente nova. Isso incluiu encontrar maneiras mais modernas e eficientes de arquitetar nossos pipelines de CI/CD. Enquanto pesquisava os muitos mecanismos de entrega contínua que podem ser implementados, me deparei com os pipelines baseados em pull e o paradigma GitOps, e foi amor à primeira vista.</description>
+    </item>
+    
+    <item>
+      <title>The peace of mind of GitOps</title>
+      <link>https://mendoncas.xyz/pt-br/en/posts/gitops/</link>
+      <pubDate>Sun, 03 Mar 2024 11:37:01 -0300</pubDate>
+      
+      <guid>https://mendoncas.xyz/pt-br/en/posts/gitops/</guid>
+      <description>Recently, we have migrated all of our services from a DC/OS Marathon cluster to an Openshift one. This was quite a big step for our organization, as we had to adapt to a completely new platform. This included finding more modern and efficient ways to architect our CI/CD pipelines. As i researched the many different continuous delivery mechanisms that can be implemented, i stumbled upon the pull-based pipelines and the GitOps paradigm, and it was love at first sight.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mendoncas.xyz/pt-br/en/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mendoncas.xyz/pt-br/en/about/</guid>
+      <description>Hi, i&amp;rsquo;m Ricardo! Link para o cabeçalho I am a DevOps engineer and programmer. I am involved in the development of applications using Spring, Quarkus, and NestJS. I build CI/CD pipelines with Gitlab CI and ArgoCD on Kubernetes clusters. I have a strong foundation in Linux systems and container creation with Docker, and I work daily on provisioning applications and services on Kubernetes.
+I believe there is value in analyzing and discussing technical subjects through personal, experience-focused, lenses.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mendoncas.xyz/pt-br/pt/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mendoncas.xyz/pt-br/pt/about/</guid>
+      <description>Oi, me chamo Ricardo! Link para o cabeçalho Eu sou um engenheiro DevOps e programador. Estou envolvido no desenvolvimento de aplicações usando Spring, Quarkus e NestJS. Construo pipelines de CI/CD com Gitlab CI e ArgoCD em clusters Kubernetes. Tenho uma base sólida em sistemas Linux e na criação de containers com Docker, e trabalho diariamente na provisionamento de aplicações e serviços no Kubernetes.
+Acredito que há valor em analisar e discutir temas técnicos através de uma lente pessoal e focada em experiência.</description>
+    </item>
+    
+  </channel>
+</rss>
